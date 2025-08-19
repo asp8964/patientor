@@ -17,7 +17,12 @@ interface Props {
 }
 
 const AddPatientModal = ({ modalOpen, onClose, onSubmit, error }: Props) => (
-  <Dialog fullWidth={true} open={modalOpen} onClose={() => onClose()}>
+  <Dialog
+    fullWidth={true}
+    open={modalOpen}
+    onClose={() => onClose()}
+    closeAfterTransition={false}
+  >
     <DialogTitle>Add a new patient</DialogTitle>
     <Divider />
     <DialogContent>
